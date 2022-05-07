@@ -1,9 +1,9 @@
-
 *{
     /* 初始化 */
     margin: 0;
     padding: 0;
 }
+
 body{
     /* 100%窗口高度 */
     height: 100vh;
@@ -34,52 +34,48 @@ a{
     text-decoration: none;
 }
 .container{
-    background-color: #fff;
-    width: 650px;
-    height: 415px;
-    border-radius: 5px;
+    /* display: inline-block; */
+    text-align:center;
+    background-color: transparent;
+    width: 55vw;
+    height: 70vh;
+    border-radius: 0.4vw;
     /* 阴影 */
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+    /* box-shadow: 5px 5px 5px rgba(0,0,0,0.1); */
     /* 相对定位 */
     position: relative;
 }
 .form-box{
-    /* 绝对定位 */
-    position: absolute;
-    top: -10%;
-    left: 5%;
     background-color: #d3b7d8;
-    width: 320px;
-    height: 500px;
-    border-radius: 5px;
-    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    position: absolute;
+    width: 30vw;
+    height: 70vh;
+    left: 13vw;
+    box-shadow: 0.1vw 0 0.9vw rgba(0,0,0,0.1);
+    border-radius: 1vw;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 2;
     /* 动画过渡 加速后减速 */
-    transition: 0.5s ease-in-out;
-}
-.homePage{
-    /* 弹性布局 垂直排列 */
-    display: flex;
+    transition: 0.5s ease-in-out; 
     flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
+    z-index: 1;
+    /* opacity: 0; */
+    
+    
+} 
 
 h1{
     text-align: center;
     margin-bottom: 25px;
     /* 大写 */
     text-transform: uppercase;
-    color: #fff;
-    /* 字间距 */
-    letter-spacing: 5px;
+    color: white;
 }
 
 .form-box button{
-    width: 70%;
+    width: 20vw;
     margin-top: 35px;
     background-color: #f6f6f6;
     outline: none;
@@ -89,14 +85,19 @@ h1{
     letter-spacing: 2px;
     border: none;
     cursor: pointer;
+    
 }
 .form-box button:hover{
     background-color: #a262ad;
     color: #f6f6f6;
     transition: background-color 0.5s ease;
 }
+
 .con-box{
-    width: 50%;
+    position: relative;
+    width: 30vw;
+    height: 70vh;
+    top: 50vh;
     /* 弹性布局 垂直排列 居中 */
     display: flex;
     flex-direction: column;
@@ -104,14 +105,21 @@ h1{
     align-items: center;
     /* 绝对定位 居中 */
     position: absolute;
+    border-radius: 2vw;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translate(70%,-50%);
+    transition: all 1s;
 }
+
 .con-box.left{
-    left: -2%;
+    opacity: 0;
+    margin-left: 22vw;
+    background: white;
 }
 .con-box.right{
-    right: -2%;
+    opacity: 0;
+    margin-left: 13vw;
+    background: white;
 }
 .con-box h2{
     color: #8e9aaf;
@@ -120,6 +128,7 @@ h1{
     letter-spacing: 3px;
     text-align: center;
     margin-bottom: 4px;
+    
 }
 .con-box p{
     font-size: 12px;
