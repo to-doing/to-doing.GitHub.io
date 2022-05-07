@@ -2,6 +2,23 @@
     margin: 0;
     padding:0;
 }
+/* 阿里矢量图标库 */
+@font-face {
+    font-family: 'iconfont';  /* project id 3383951 */
+    src: url('');
+    src: url('?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_3383951_w6uds6hb0k9.woff2') format('woff2'),
+    url('//at.alicdn.com/t/font_3383951_w6uds6hb0k9.woff') format('woff'),
+    url('//at.alicdn.com/t/font_3383951_w6uds6hb0k9.ttf') format('truetype'),
+    url('#iconfont') format('svg');
+  }
+  .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 html,body{
     width: 100%;
     height: 100%;
@@ -26,31 +43,81 @@ html,body{
     }
 }
 .box1{
-    /* background:rgb(255, 255, 255); */
+    background:rgba(255, 255, 255,0.2);
+    position: fixed;
     width: 200px;
     height: 100%;
     float: left;
     overflow: auto;
+    /* display: flex; */
+    
 }
 .box2{
     height: 100%;
     /* background:#f5f6fa; */
     margin-left: 210px;
 }
-.nav p{
+.nav p:nth-child(1){
+    font-size: 20px;
     font-weight: bold;
-    margin-bottom: 30px;
+    margin-left: 18px;
+    color: white;
+    margin-bottom: 10px;
+}
+.nav p:nth-child(2){
+    font-size: 12px;
+    margin:10px 20px;
+    color: white;
+    border: 1px solid white;
+}
+
+.box1 .backPage{
+    position: fixed;
+    width: 200px;
+    height: 60px; 
+    background: transparent;
+    color: whitesmoke;
+    font-size: 18px;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 60px;
+    bottom: 0;
+    cursor: pointer;
+    transition: all 1s;
+}
+.box1 .backPage span{
+    font-size: 25px;
+}
+.box1 .backPage:hover{
+    background: #35c9cb;
+    border-radius: 15px;
+    margin-bottom: 20px;
 }
 .nav ul li{
     width: 100%;
     height: 50px;
     line-height: 50px;
     margin-bottom: 10px;
-    background:skyblue;
-    color: black;
+    background:transparent; 
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 20px;
     text-align: center;
-    letter-spacing: 0.5rem;
+    cursor: pointer;
+    /* letter-spacing: 0.5rem;  */
+    transition: all 1s;
+    
 }
+.nav ul li:hover{
+    background: skyblue;
+    width: 80%;
+}
+.nav ul li span{
+    font-size: 16px;
+}
+
+
 .box2>div{
     width: 100%;
     height: auto;
@@ -64,9 +131,14 @@ html,body{
 .box2>div>p{
     width: 100%;
     font-weight: bold;
-    height: 20px;
+    font-size: 25px;
+    color: white;
+    height: 40px;
     line-height: 20px;
     margin: 10px;
+    margin-left: 45%;
+    margin-bottom: 10px;
+    text-shadow: 1px 0.5px;
 }
 .box2>div a{
     text-decoration: none;
@@ -75,15 +147,46 @@ html,body{
 .box2>div>div{
     width: 210px;
     height: 100px;
-    background: white;
+    background: transparent;
+    border: 1px solid white;
+    font-size: 16px;
+    color: white;
     margin-bottom: 20px;
     margin-left: 20px;
+    box-shadow: 1px 1px 9px 0.5px white;
     border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s linear;
 }
 .box2>div>div:hover{
     background: skyblue;
-    transition: all 0.5s;
-    /* color: white; */
-    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 20px;
+    width: 250px;
+    height: 150px;
+    cursor: pointer; 
+    font-weight: bolder;
     
 }
+.box2>div>div:hover img{
+    width: 20px;
+    height: 20px;
+}
+.box2>div>div:hover p{
+    font-style: oblique;
+    font-size: 15px;
+}
+.box2>div>div img{
+    margin-left: 20%;
+    width: 16px;
+    height: 16px;
+}
+.box2>div>div p{
+    font-weight: normal;
+    font-size: 13px;
+    position: absolute;
+    top: 35px;
+    left: 20px;
+}
+
