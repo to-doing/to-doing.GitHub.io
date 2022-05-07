@@ -160,8 +160,8 @@ html,body{
 
 
 
-
-@media screen  and (orientation:landscape){     /*横屏*/
+/*横屏*/
+@media screen  and (orientation:landscape){     
     .box2{
         height: calc(100vh - 1vh);
         margin-left: 20vw;
@@ -261,11 +261,8 @@ html,body{
 
 
 
-
-
-
-
-@media screen  and (orientation:portrait){      /* 竖屏*/
+/* 竖屏*/
+@media screen  and (orientation:portrait){      
     .nav p:nth-child(1){
         font-size: 1.5vw;
         margin-left: 1.1vw;
@@ -333,7 +330,7 @@ html,body{
         border-radius: 1.2vw;
     }
     .box2>div>div img{
-            margin-left: 6vw;
+            margin-left: 9vw;
             width: 2vw;
             height: 2vh;
         }
