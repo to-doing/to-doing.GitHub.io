@@ -20,18 +20,22 @@
     -moz-osx-font-smoothing: grayscale;
   }
 /* 设置滚动条的样式 */
-html,body::-webkit-scrollbar-thumb {
+::-webkit-scrollbar {
+    width: 11px;
+    height: 11px;     
+}
+::-webkit-scrollbar-thumb {
     background: rgb(190, 188, 188);    
-    border-radius: 13px;
+    border-radius: 11px;
 }
 
 .box1::-webkit-scrollbar {
-    width: 6px;
+    width: 6px;     
 }
 /* 滚动条滑块 */
 .box1::-webkit-scrollbar-thumb {
-/*     border: 1px solid lightgray; */
-    border-radius: 13px;
+    /* border: 1px solid lightgray; */
+        border-radius: 11px;
 }
     
 html,body{
