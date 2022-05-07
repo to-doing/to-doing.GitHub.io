@@ -8,6 +8,23 @@ html,body{
     height: 100%;
     font-size: 16px;
     font-family: 微软雅黑;
+    background: linear-gradient(280deg,#e1c8cc,#9cb0ce,#5f8e77);
+    /* 指定背景图像的大小 */
+    background-size: 500%;
+    /* 执行动画：动画名 时长 线性的 无限次播放 */
+    animation: bgAnimation 5s linear infinite;
+}
+/* 定义动画 */
+@keyframes bgAnimation {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
 }
 .box1{
     background:white;
