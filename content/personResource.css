@@ -27,7 +27,6 @@ html,body{
     }
 }
 .box1{
-    background:white;
     width: 200px;
     height: 100%;
     float: left;
@@ -35,7 +34,6 @@ html,body{
 }
 .box2{
     height: 100%;
-    background:#f5f6fa;
     margin-left: 210px;
 }
 .nav p{
