@@ -1,65 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
 
-    <title>个人主界面</title>
-    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-<div class="container">
-    <div class="form-box">
-        <div class="homePage">
-            <h1>To doing</h1> 
-            <button id="personPage">个人主页</button>
-            <button id="personResource">个人资源库</button>
-           
+    <div id="container" class="container">
+        <div id="box_left" class="con-box left">
+            <h2>To doing</h2>
+            <img src="../img/person.jpg" alt="" width="150px" height="50px">
+            <p><span>雾遍松山隐</span></p>
+            <p><span>风起云烟令</span></p>
+            <p>一个爱编程的男孩子</p>
+            <p>生日：正月二十四</p>
+            <p>爱好：代码，音乐，阅读</p>
+            <p>星座：双鱼</p>
+                        
+            <!-- <button>兴趣使然写的打油歌</button> -->
+        </div>
+        <div id="box_right" class="con-box right">
+            <h2>资源库</h2>
+            <p>一个人的收藏库</p>
+            <button><a href="content/personResource.html" target="_blank">资源导航</a></button>   
+            <br>    
+            <button>软件合集</button>   
+            <button>游戏合集</button>     
+        </div>
+        <div class="form-box">
+                <h1>To doing</h1> 
+                <button id="personPage">个人主页</button>
+                <button id="personResource">个人资源库</button>
         </div>
     </div>
-    <div class="con-box left">
-        <h2>To doing</h2>
-        <img src="../img/person.jpg" alt="" width="150px" height="50px">
-        <p><span>雾遍松山隐</span></p>
-        <p><span>风起云烟令</span></p>
-        <p>一个爱编程的男孩子</p>
-        <p>生日：正月二十四</p>
-        <p>爱好：代码，音乐，阅读</p>
-        <p>星座：双鱼</p>
-                    
-        <button>兴趣使然写的打油歌</button>
-
-    </div>
-    <div class="con-box right">
-        <h2>资源库</h2>
-        <br>
-        <p>一个人的收藏库</p>
-        <br>
-        <button><a href="content/personResource.html" target="_blank">资源导航</a></button>   
-        <button>软件合集（待更新）</button>   
-        <button>游戏合集（待更新）</button>     
-    </div>
-</div>
+</body>
 <script>
     // 要操作到的元素
+    let box_right=document.getElementById('box_right');
+    let box_left=document.getElementById('box_left');
     let personResource=document.getElementById('personResource');
     let personPage=document.getElementById('personPage');
     let form_box=document.getElementsByClassName('form-box')[0];
     
     let homePage=document.getElementsByClassName('homePage')[0];
-    // 去注册按钮点击事件
-    personPage.addEventListener('click',()=>{
-        form_box.style.transform='translateX(80%)';
-        homePage.classList.add('hidden');
-    })
-    // 去登录按钮点击事件
+   
+    // 个人资源库按钮点击事件
     personResource.addEventListener('click',()=>{
-        form_box.style.transform='translateX(0%)';
-        homePage.classList.remove('hidden');
+        box_left.style.opacity='0'
+        box_right.style.opacity='1'
+        form_box.style.transform='translateX(-40%)';
+        box_right.style.transform='translate(55%,-50%)';
+        box_left.style.transform='translate(65%,-50%)'
     })
-</script>
-</body>
-
+     // 个人主页按钮点击事件
+     personPage.addEventListener('click',()=>{
+         box_right.style.opacity='0' 
+         box_left.style.opacity='1'
+        form_box.style.transform='translateX(60%)';
+        box_left.style.transform='translate(-65%,-50%)';
+        box_right.style.transform='translate(-55%,-50%)'
+    })
+    </script>
 </html>
