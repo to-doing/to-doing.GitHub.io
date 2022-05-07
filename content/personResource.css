@@ -71,57 +71,123 @@ html,body{
 }
 
 
-
-@media screen  and (orientation:landscape){     /*横屏*/
-    .box1{
-        background:rgba(255, 255, 255,0.2);
+/* 通用属性 */
+.box1{
+    background:rgba(255, 255, 255,0.2);
         position: fixed;
         width: calc(20vw + 1vw);
         height: 90vh;
         float: left;
         overflow: auto;
-        /* display: flex; */
-        
-    }
+}
+.box2{
+    height: calc(100vh - 1vh);
+    margin-left: 20vw;
+}
+.nav p:nth-child(1){
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+.nav p:nth-child(2){
+    color: white;
+}
+.box1 .backPage{
+    position: fixed;
+    background: transparent;
+    color: whitesmoke;
+    font-weight: bolder;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.box1 .backPage:hover{
+    background: #35c9cb;
+}
+.nav ul li{
+    background:transparent; 
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: all 1s;
+}
+.nav ul li:hover{
+    background: skyblue;
+}
+
+.box2>div{
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+}
+.box2>div>p{
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+
+.box2>div>div{
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    overflow: hidden;
+    transition: all 0.5s linear;
+}
+
+.box2>div>div p{
+    font-weight: normal;
+    text-align: center;
+    
+}
+
+.box2>div>div:hover{
+    background: skyblue;
+    transition: all 0.2s;
+    cursor: pointer; 
+    font-weight: bolder;
+    
+}
+
+.box2>div>div:hover p{
+    font-style: oblique;
+}
+
+
+
+
+
+@media screen  and (orientation:landscape){     /*横屏*/
     .box2{
         height: calc(100vh - 1vh);
-        /* background:#f5f6fa; */
         margin-left: 20vw;
     }
     .nav p:nth-child(1){
         font-size: 2vw;
-        font-weight: bold;
         margin-left: 1.3vw;
-        color: white;
-        text-align: center;
         margin-bottom: 0.9vw;
     }
     .nav p:nth-child(2){
         font-size: 0.9vw;
         margin: 1vw 2vh;
-        color: white;
         border: 0.09vw solid white;
     }
     
     .box1 .backPage{
-        position: fixed;
         width: 20vw;
         height: 9vh; 
-        background: transparent;
-        color: whitesmoke;
         font-size: 2.2vw;
-        font-weight: bolder;
-        text-align: center;
         line-height: 9vh;
         bottom: 0;
-        cursor: pointer;
-        transition: all 1s;
     }
     .box1 .backPage span{
         font-size: 2.2vw;
     }
     .box1 .backPage:hover{
-        background: #35c9cb;
         border-radius: 1.7vw;
         margin-bottom: 2vh;
     }
@@ -130,18 +196,10 @@ html,body{
         height: 7vh;
         line-height: 7vh;
         margin-bottom: 1vh;
-        background:transparent; 
-        color: white;
         font-size: 1.4vw;
-        font-weight: bold;
         border-radius: 1.8vw;
-        text-align: center;
-        cursor: pointer;
-        /* letter-spacing: 0.5rem;  */
-        transition: all 1s;
     }
     .nav ul li:hover{
-        background: skyblue;
         width: 18vw;
         margin-left: 2vw;
     }
@@ -152,22 +210,14 @@ html,body{
     
     .box2>div{
         width: calc(80vw -2vw);
-        height: auto;
         margin-bottom: 1.8vh;
-        display: flex;
-        flex-wrap: wrap;
-        align-content: flex-start;
-        justify-content: flex-start;
     }
     .box2>div>p{
         width: 100vw;
-        font-weight: bold;
         font-size: 2vw;
-        color: white;
         height: 6vh;
         line-height: 6vh;
         margin-top: 1vh;
-        text-align: center;
         margin-bottom: 2vh;
         text-shadow: 0.09vw 0.045px;
     }
@@ -176,16 +226,11 @@ html,body{
     .box2>div>div{
         width: 20vw;
         height: 20vh;
-        background: transparent;
-        border: 1px solid white;
         font-size: 1.2vw;
-        color: white;
         margin-bottom: 4vh;
         margin-left: 3vw;
         box-shadow: 0.09vh 0.09vw 0.45vw white;
         border-radius: 1.2vw;
-        overflow: hidden;
-        transition: all 0.5s linear;
     }
     .box2>div>div img{
             margin-left: 4vw;
@@ -193,21 +238,15 @@ html,body{
             height: 2vh;
         }
     .box2>div>div p{
-        font-weight: normal;
         font-size: 1.3vw;
-        text-align: center;
         margin-top: 3vh;
         
     }
 
     .box2>div>div:hover{
-        background: skyblue;
-        transition: all 0.2s;
         font-size: 1.6vw;
         width: 24vw;
         height: 26vh;
-        cursor: pointer; 
-        font-weight: bolder;
         
     }
     .box2>div>div:hover img{
@@ -215,63 +254,40 @@ html,body{
         height: 2.7vh;
     }
     .box2>div>div:hover p{
-        font-style: oblique;
         font-size: 1.5vw;
     }
 }
 
 
 
+
+
+
+
+
 @media screen  and (orientation:portrait){      /* 竖屏*/
-    .box1{
-        background:rgba(255, 255, 255,0.2);
-        position: fixed;
-        width: calc(20vw + 1vw);
-        height: 90vh;
-        float: left;
-        overflow: auto;
-        /* display: flex; */
-        
-    }
-    .box2{
-        height: calc(100vh - 1vh);
-        /* background:#f5f6fa; */
-        margin-left: 20vw;
-    }
     .nav p:nth-child(1){
         font-size: 1.5vw;
-        font-weight: bold;
         margin-left: 1.1vw;
-        color: white;
-        text-align: center;
         margin-bottom: 1.5vh;
     }
     .nav p:nth-child(2){
         font-size: 0;
         margin: 0 1vh;
-        color: white;
         border: 0.09vw solid white;
     }
     
     .box1 .backPage{
-        position: fixed;
         width: calc(20vw + 1vw);
         height: 9vh; 
-        background: transparent;
-        color: whitesmoke;
         font-size: 1.7vw;
-        font-weight: bolder;
-        text-align: center;
         line-height: 9vh;
         bottom: 0;
-        cursor: pointer;
-        transition: all 0.5s;
     }
     .box1 .backPage span{
         font-size: 2vw;
     }
     .box1 .backPage:hover{
-        background: #35c9cb;
         border-radius: 1.7vw;
         margin-bottom: 0.5vh;
     }
@@ -280,18 +296,10 @@ html,body{
         height: 6vh;
         line-height: 6vh;
         margin-bottom: 1vh;
-        background:transparent; 
-        color: white;
         font-size: 1vw;
-        font-weight: bold;
         border-radius: 1.6vw;
-        text-align: center;
-        cursor: pointer;
-        /* letter-spacing: 0.5rem;  */
-        transition: all 1s;
     }
     .nav ul li:hover{
-        background: skyblue;
         width: 18vw;
         margin-left: 2vw;
     }
@@ -302,22 +310,14 @@ html,body{
     
     .box2>div{
         width: calc(80vw -2vw);
-        height: auto;
         margin-bottom: 1vh;
-        display: flex;
-        flex-wrap: wrap;
-        align-content: flex-start;
-        justify-content: flex-start;
     }
     .box2>div>p{
         width: 100vw;
-        font-weight: bold;
         font-size: 2vw;
-        color: white;
         height: 5vh;
         line-height: 5vh;
         margin-top: 1vh;
-        text-align: center;
         margin-bottom: 2vh;
         text-shadow: 0.09vw 0.045px;
     }
@@ -326,16 +326,11 @@ html,body{
     .box2>div>div{
         width: 34vw;
         height: 20vh;
-        background: transparent;
-        border: 1px solid white;
         font-size: 1.2vw;
-        color: white;
         margin-bottom: 4vh;
         margin-left: 3vw;
         box-shadow: 0.09vh 0.09vw 0.45vw white;
         border-radius: 1.2vw;
-        overflow: hidden;
-        transition: all 0.5s linear;
     }
     .box2>div>div img{
             margin-left: 6vw;
@@ -343,21 +338,15 @@ html,body{
             height: 2vh;
         }
     .box2>div>div p{
-        font-weight: normal;
         font-size: 1.3vw;
-        text-align: center;
         margin-top: 3vh;
         
     }
 
     .box2>div>div:hover{
-        background: skyblue;
-        transition: all 0.2s;
         font-size: 1.6vw;
         width: 36vw;
         height: 25vh;
-        cursor: pointer; 
-        font-weight: bolder;
         
     }
     .box2>div>div:hover img{
@@ -365,8 +354,13 @@ html,body{
         height: 2.5vh;
     }
     .box2>div>div:hover p{
-        font-style: oblique;
         font-size: 1.5vw;
     }
 
 }
+    
+
+
+
+
+
