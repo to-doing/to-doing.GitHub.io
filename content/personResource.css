@@ -73,13 +73,12 @@ border-radius: 13px;
 .box1::-webkit-scrollbar {
     width: 6px;
 }
-
 /* 滚动条滑块 */
+
 .box1::-webkit-scrollbar-thumb {
     /* border: 1px solid lightgray; */
         border-radius: 13px;
 }
-
 .box1{
     background:rgba(255, 255, 255,0.2);
     position: fixed;
