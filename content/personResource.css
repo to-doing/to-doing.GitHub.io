@@ -20,7 +20,7 @@
     -moz-osx-font-smoothing: grayscale;
   }
 /* 设置滚动条的样式 */
-html::-webkit-scrollbar-thumb {
+html,body::-webkit-scrollbar-thumb {
     background: rgb(190, 188, 188);    
     border-radius: 13px;
 }
