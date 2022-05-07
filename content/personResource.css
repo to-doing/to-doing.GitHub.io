@@ -19,25 +19,20 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+/* 设置滚动条的样式 */
+::-webkit-scrollbar-thumb {
+    background: rgb(190, 188, 188);    
+border-radius: 13px;
+}
 
-    /* 设置滚动条的样式 */
-
-    ::-webkit-scrollbar {
-    width: 12px;
-    }
- 
-    /* 滚动条滑块 */
-    
-    ::-webkit-scrollbar-thumb {
-    
-    border-radius: 13px;
-    background: linear-gradient(90deg,#e1c8cc,#9cb0ce,#5f8e77,);
-    /* 指定背景图像的大小 */
-    background-size: 500%;
-    /* 执行动画：动画名 时长 线性的 无限次播放 */
-    animation: bgAnimation 3s linear infinite;
-    
-    }
+.box1::-webkit-scrollbar {
+    width: 6px;
+}
+/* 滚动条滑块 */
+.box1::-webkit-scrollbar-thumb {
+    /* border: 1px solid lightgray; */
+        border-radius: 13px;
+}
     
 html,body{
     width: 100vw;
