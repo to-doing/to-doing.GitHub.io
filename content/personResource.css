@@ -19,9 +19,29 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+    /* 设置滚动条的样式 */
+
+    ::-webkit-scrollbar {
+    width: 12px;
+    }
+ 
+    /* 滚动条滑块 */
+    
+    ::-webkit-scrollbar-thumb {
+    
+    border-radius: 13px;
+    background: linear-gradient(90deg,#e1c8cc,#9cb0ce,#5f8e77,);
+    /* 指定背景图像的大小 */
+    background-size: 500%;
+    /* 执行动画：动画名 时长 线性的 无限次播放 */
+    animation: bgAnimation 3s linear infinite;
+    
+    }
+    
 html,body{
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     font-size: 16px;
     font-family: 微软雅黑;
     background: linear-gradient(280deg,#e1c8cc,#9cb0ce,#5f8e77);
@@ -30,6 +50,7 @@ html,body{
     /* 执行动画：动画名 时长 线性的 无限次播放 */
     animation: bgAnimation 5s linear infinite;
 }
+
 /* 定义动画 */
 @keyframes bgAnimation {
     0%{
@@ -42,11 +63,28 @@ html,body{
         background-position: 0% 50%;
     }
 }
+/* 设置滚动条的样式 */
+::-webkit-scrollbar-thumb {
+    background: rgb(190, 188, 188);    
+border-radius: 13px;
+
+}
+
+.box1::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* 滚动条滑块 */
+.box1::-webkit-scrollbar-thumb {
+    /* border: 1px solid lightgray; */
+        border-radius: 13px;
+}
+
 .box1{
     background:rgba(255, 255, 255,0.2);
     position: fixed;
     width: 200px;
-    height: 100%;
+    height: 90%;
     float: left;
     overflow: auto;
     /* display: flex; */
@@ -62,11 +100,12 @@ html,body{
     font-weight: bold;
     margin-left: 18px;
     color: white;
+    text-align: center;
     margin-bottom: 10px;
 }
 .nav p:nth-child(2){
-    font-size: 12px;
-    margin:10px 20px;
+    font-size: 10px;
+    margin: 20px 20px;
     color: white;
     border: 1px solid white;
 }
@@ -135,8 +174,8 @@ html,body{
     color: white;
     height: 40px;
     line-height: 20px;
-    margin: 10px;
-    margin-left: 45%;
+    margin-top: 10px;
+    text-align: center;
     margin-bottom: 10px;
     text-shadow: 1px 0.5px;
 }
@@ -156,7 +195,6 @@ html,body{
     box-shadow: 1px 1px 9px 0.5px white;
     border-radius: 5px;
     overflow: hidden;
-    position: relative;
     transition: all 0.5s linear;
 }
 .box2>div>div:hover{
@@ -185,8 +223,8 @@ html,body{
 .box2>div>div p{
     font-weight: normal;
     font-size: 13px;
-    position: absolute;
-    top: 35px;
-    left: 20px;
+    text-align: center;
+    margin-top: 20px;
+    
 }
 
