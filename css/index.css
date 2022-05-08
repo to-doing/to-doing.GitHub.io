@@ -88,19 +88,18 @@ div:nth-child(1) {
 }
 
 .welcomePage button {
-    width: 18vmin;
-    height: 8vmin;
+    width: 20vmin;
+    height: 9vmin;
     margin-top: 2vmin;
     background-color: #f6f6f6;
-    font-size: 1vmin;
     outline: none;
     border-radius: 8px;
     padding: 3px;
     color: #a262ad;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     border: none;
+    outline: none;
     cursor: pointer;
-    position: relative;
 }
 
 .welcomePage button:hover {
@@ -159,9 +158,9 @@ h2 {
     width: 20vmin;
     height: 7vmin;
     margin-top: 0.5vmin;
-    background-color: #fff;
+    background-color:#f1f6f6;
     color: #a262ad;
-    border: 1px solid #d3b7d8;
+    border: none;
     padding: 0.5vmin 1vmin;
     border-radius: 5px;
     letter-spacing: 1px;
