@@ -73,6 +73,7 @@ div:nth-child(1) {
     background-color: white;
     transform: translate3d(0, 0, 2px);
     font-size: 2vmin;
+    overflow:hidden;
     /* opacity: 0; */
 }
 
