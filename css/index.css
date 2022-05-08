@@ -150,5 +150,4 @@ h2{
 .personResource button:hover{
     background-color: #a478ac;
     color: #f6f6f6;
-    transition: background-color 0.5s ease;
-}
+    transition: background-color 0.5s ease;}
