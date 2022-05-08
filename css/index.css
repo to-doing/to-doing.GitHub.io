@@ -41,7 +41,6 @@ a {
 section {
     width: 100vw;
     height: 100vh;
-    background-color: pink;
     position: relative;
     transform-style: preserve-3d;
 }
