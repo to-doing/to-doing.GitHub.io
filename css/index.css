@@ -91,7 +91,6 @@ div:nth-child(1) {
     height: 9vmin;
     margin-top: 2vmin;
     background-color: #f6f6f6;
-    outline: none;
     border-radius: 8px;
     padding: 3px;
     color: #a262ad;
@@ -159,11 +158,11 @@ h2 {
     margin-top: 0.5vmin;
     background-color:#f1f6f6;
     color: #a262ad;
-    border: none;
     padding: 0.5vmin 1vmin;
     border-radius: 5px;
     letter-spacing: 1px;
     outline: none;
+    border: none;
     cursor: pointer;
 }
 
