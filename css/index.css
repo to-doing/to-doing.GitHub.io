@@ -89,6 +89,7 @@ div:nth-child(1) {
 
 .welcomePage button {
     width: 18vmin;
+    height: 8vmin;
     margin-top: 2vmin;
     background-color: #f6f6f6;
     font-size: 1vmin;
