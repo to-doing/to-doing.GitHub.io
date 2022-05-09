@@ -117,7 +117,7 @@ html,body{
 .leftBox .backHomePage{
     width: 26vmin;
     height: 10vh; 
-    font-size: 2.8vmin;
+    font-size: 3vmin;
     line-height: 9vh;
     bottom: 0;
     position: fixed;
@@ -129,7 +129,7 @@ html,body{
     transition: all 1s;
 }
 .leftBox .backHomePage span{
-    font-size: 2.8vmin;
+    font-size: 3vmin;
 }
 
 .leftBox .backHomePage:hover{
@@ -140,7 +140,7 @@ html,body{
 nav ul{
     position: absolute;
     top: 20vmin;
-    bottom: 20vmin;
+    bottom: 10vh;
     height: 65vh;
     overflow: auto;
 }
@@ -222,7 +222,7 @@ nav ul li span{
     transition: all 0.5s linear;
 }
 .rightBox>div>div:hover{
-    font-size: 2.5vmin;
+    font-size: 2.7vmin;
     width: 26vmin;
     height: 26vmin;
     background: skyblue;
@@ -263,16 +263,5 @@ nav ul li span{
 .rightBox>div>div:hover p{
     font-size: 2.3vmin;
     font-style: oblique;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 5;
 }
-
-
-
-
-
-
-
-
-
-
-
