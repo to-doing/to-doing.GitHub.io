@@ -65,8 +65,8 @@ html,body{
     border-radius: 1vmin;
 }
 
-.leftBox::-webkit-scrollbar {
-    width: 0.5vmin;
+.leftBox ul::-webkit-scrollbar {
+    width: 0.7vmin;
         
 }
 /* 滚动条滑块 */
@@ -80,31 +80,44 @@ html,body{
 .leftBox{
     background:rgba(255, 255, 255,0.2);
     position: fixed;
-    width: calc(20vmin + 1vmin);
+    width: calc(26vmin);
     height: 90vh;
     float: left;
-    overflow: auto;
+    /* overflow: auto; */
     box-sizing: border-box;
 }
-nav p:nth-child(1){
+.leftBox>div:nth-child(1){
+    height: 20vmin;
+    display: flex;
+    flex-direction: column;
+}
+.leftBox>div p:nth-child(1){
     font-weight: bold;
     color: white;
+    height: 10vmin;
+    line-height: 8vmin;
     text-align: center;
-    font-size: 3.5vmin;
-    margin-bottom: 2vmin;
+    font-size: 4vmin;
 }
-nav p:nth-child(2){
+.leftBox>div p:nth-child(2){
     text-align: center;
     color: white;
-    font-size: 0.9vmin;
-    padding: 0.5vmin 0.5vmin;
+    /* height: 15vmin; */
+    font-size: 1.5vmin;
+    padding-bottom: 6px;
     margin: 1vmin 1vmin;
     border: 0.09vmin solid white;
+    /* 指定超出几行进行隐藏 */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient:block-axis;
+    overflow: hidden;
+    text-overflow: ellipsis; 
 }
 .leftBox .backHomePage{
-    width: 20vmin;
-    height: 9vh; 
-    font-size: 2.2vmin;
+    width: 25vmin;
+    height: 10vh; 
+    font-size: 2.5vmin;
     line-height: 9vh;
     bottom: 0;
     position: fixed;
@@ -116,21 +129,27 @@ nav p:nth-child(2){
     transition: all 1s;
 }
 .leftBox .backHomePage span{
-    font-size: 2.2vmin;
+    font-size: 2.5vmin;
 }
 
 .leftBox .backHomePage:hover{
     background: #35c9cb;
-    border-radius: 1.7vmin;
-    /* margin-bottom: 0.5vh; */
+    border-radius: 2.5vmin;
+}
 
+nav ul{
+    position: absolute;
+    top: 20vmin;
+    bottom: 10vh;
+    height: 65vh;
+    overflow: auto;
 }
 nav ul li{
-    width: 20vmin;
-    height: 7vh;
-    line-height: 7vh;
-    margin-bottom: 1vh;
-    font-size: 2vmin;
+    width: 24vmin;
+    height: 7vmin;
+    line-height: 7vmin;
+    margin-bottom: 1.5vmin;
+    font-size: 2.5vmin;
     border-radius: 1.8vmin;
     background:transparent; 
     color: white;
@@ -141,16 +160,16 @@ nav ul li{
 }
 nav ul li:hover{
     background: skyblue;
-    width: 18vmin;
+    width: 22vmin;
     margin-left: 2vmin;
 }
 nav ul li span{
     font-size: 2vmin;
 }
 .rightBox{
-    width: calc(100vw -21.2vmin);
+    width: calc(100vw -26vmin);
     height: calc(100vh - 1vh);
-    margin-left: 21.2vmin;
+    margin-left: 26vmin;
     box-sizing: border-box;
 }
 .rightBox>div{
@@ -164,13 +183,12 @@ nav ul li span{
 }
 .rightBox>div>p:nth-child(1){
     width: calc(100vw - 21.2vmin);
-    font-size: 3vmin;
-    height: 6vh;
-    line-height: 6vh;
-    margin-top: 1vh;
-    margin-bottom: 2vh;
+    font-size: 4.3vmin;
+    height: 10vmin;
+    line-height: 10vmin;
     text-shadow: 0.09vmin 0.045px;
-    padding-top: 2vh;
+    padding-top: 1vmin;
+    margin-bottom: 2vmin;
     border-top: 0.09vh solid white;
     font-weight: bold;
     color: white;
@@ -178,11 +196,10 @@ nav ul li span{
 }
 .rightBox>div>p:nth-child(2){
     width: calc(100vw - 21.2vmin);
-    height: 3vh;
-    font-size: 2vmin;
-    line-height: 3vh;
-    margin-bottom: 3vh;
-    padding-bottom: 2vw;
+    height: 10vmin;
+    font-size: 2.5vmin;
+    margin-bottom: 7vmin;
+    padding-bottom: 3vmin;
     border-bottom: 0.09vmin solid white;
     font-weight: 400;
     color: white;
@@ -193,9 +210,9 @@ nav ul li span{
 .rightBox>div>div{
     margin: 0 auto;
     width: 24vmin;
-    height: 20vh;
-    font-size: 2.2vmin;
-    margin-bottom: 4vh;
+    height: 20vmin;
+    font-size: 2.5vmin;
+    margin-bottom: 5vmin;
     box-shadow: 0.09vmin 0.09vmin 0.45vmin white;
     border-radius: 2vmin;
     background: transparent;
@@ -204,9 +221,23 @@ nav ul li span{
     overflow: hidden;
     transition: all 0.5s linear;
 }
+.rightBox>div>div:hover{
+    font-size: 2.5vmin;
+    width: 26vmin;
+    height: 26vmin;
+    background: skyblue;
+    transition: all 0.2s;
+    cursor: pointer; 
+    font-weight: bolder;
+    
+}
 .rightBox>div>div img{
     width: 2vmin;
     height: 2vmin;
+}
+.rightBox>div>div:hover img{
+    width: 2.6vmin;
+    height: 2.6vmin;
 }
 .rightBox>div>div>div{
     text-align: center;
@@ -217,23 +248,15 @@ nav ul li span{
     margin-top: 3vh;
     font-weight: normal;
     text-align: center;
+    /* 指定超出几行进行隐藏 */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient:block-axis;
+    overflow: hidden;
+    text-overflow: ellipsis;
     
 }
 
-.rightBox>div>div:hover{
-    font-size: 2.5vmin;
-    width: 26vmin;
-    height: 26vh;
-    background: skyblue;
-    transition: all 0.2s;
-    cursor: pointer; 
-    font-weight: bolder;
-    
-}
-.rightBox>div>div:hover img{
-    width: 2.6vmin;
-    height: 2.6vmin;
-}
 .rightBox>div>div:hover p{
     font-size: 2.3vmin;
     font-style: oblique;
