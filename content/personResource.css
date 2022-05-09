@@ -115,9 +115,9 @@ html,body{
     text-overflow: ellipsis; 
 }
 .leftBox .backHomePage{
-    width: 25vmin;
+    width: 26vmin;
     height: 10vh; 
-    font-size: 2.5vmin;
+    font-size: 3vmin;
     line-height: 9vh;
     bottom: 0;
     position: fixed;
@@ -129,7 +129,7 @@ html,body{
     transition: all 1s;
 }
 .leftBox .backHomePage span{
-    font-size: 2.5vmin;
+    font-size: 3vmin;
 }
 
 .leftBox .backHomePage:hover{
@@ -148,8 +148,8 @@ nav ul li{
     width: 24vmin;
     height: 7vmin;
     line-height: 7vmin;
-    margin-bottom: 1.5vmin;
-    font-size: 2.5vmin;
+    margin-bottom: 3vmin;
+    font-size: 2.8vmin;
     border-radius: 1.8vmin;
     background:transparent; 
     color: white;
@@ -222,7 +222,7 @@ nav ul li span{
     transition: all 0.5s linear;
 }
 .rightBox>div>div:hover{
-    font-size: 2.5vmin;
+    font-size: 2.7vmin;
     width: 26vmin;
     height: 26vmin;
     background: skyblue;
@@ -241,6 +241,9 @@ nav ul li span{
 }
 .rightBox>div>div>div{
     text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .rightBox>div>div p{
@@ -260,6 +263,7 @@ nav ul li span{
 .rightBox>div>div:hover p{
     font-size: 2.3vmin;
     font-style: oblique;
+    -webkit-line-clamp: 5;
 }
 
 
