@@ -105,7 +105,7 @@ div:nth-child(1) {
     width: 22vmin;
     background-color: #a262ad;
     color: #f6f6f6;
-    transition: all 1s ease;
+    transition: all 1s;
 }
 
 .welcomePage h1 {
@@ -172,5 +172,5 @@ h2 {
     width: 22vmin;
     background-color: #a478ac;
     color: #f6f6f6;
-    transition: all 1s ease;
+    transition: all 1s;
 }
