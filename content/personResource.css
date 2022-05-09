@@ -87,15 +87,15 @@ html,body{
     box-sizing: border-box;
 }
 .leftBox>div:nth-child(1){
-    height: 20vh;
+    height: 20vmin;
     display: flex;
     flex-direction: column;
 }
 .leftBox>div p:nth-child(1){
     font-weight: bold;
     color: white;
-    height: 10vh;
-    line-height: 10vh;
+    height: 10vmin;
+    line-height: 8vmin;
     text-align: center;
     font-size: 4vmin;
 }
@@ -114,13 +114,13 @@ html,body{
     overflow: hidden;
     text-overflow: ellipsis; 
 }
-.backHomePage{
+.leftBox .backHomePage{
     width: 26vmin;
     height: 10vh; 
     font-size: 2.8vmin;
-    line-height: 10vh;
-    position: fixed;
+    line-height: 9vh;
     bottom: 0;
+    position: fixed;
     background: transparent;
     color: whitesmoke;
     font-weight: bolder;
@@ -140,7 +140,7 @@ html,body{
 nav ul{
     position: absolute;
     top: 20vmin;
-    bottom: 10vh;
+    bottom: 20vmin;
     height: 65vh;
     overflow: auto;
 }
@@ -222,7 +222,7 @@ nav ul li span{
     transition: all 0.5s linear;
 }
 .rightBox>div>div:hover{
-    font-size: 2.7vmin;
+    font-size: 2.5vmin;
     width: 26vmin;
     height: 26vmin;
     background: skyblue;
@@ -263,7 +263,7 @@ nav ul li span{
 .rightBox>div>div:hover p{
     font-size: 2.3vmin;
     font-style: oblique;
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 4;
 }
 
 
