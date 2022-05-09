@@ -87,15 +87,15 @@ html,body{
     box-sizing: border-box;
 }
 .leftBox>div:nth-child(1){
-    height: 20vmin;
+    height: 20vh;
     display: flex;
     flex-direction: column;
 }
 .leftBox>div p:nth-child(1){
     font-weight: bold;
     color: white;
-    height: 10vmin;
-    line-height: 8vmin;
+    height: 10vh;
+    line-height: 10vh;
     text-align: center;
     font-size: 4vmin;
 }
@@ -114,13 +114,13 @@ html,body{
     overflow: hidden;
     text-overflow: ellipsis; 
 }
-.leftBox .backHomePage{
+.backHomePage{
     width: 26vmin;
     height: 10vh; 
-    font-size: 3vmin;
-    line-height: 9vh;
-    bottom: 0;
+    font-size: 2.8vmin;
+    line-height: 10vh;
     position: fixed;
+    bottom: 0;
     background: transparent;
     color: whitesmoke;
     font-weight: bolder;
@@ -129,7 +129,7 @@ html,body{
     transition: all 1s;
 }
 .leftBox .backHomePage span{
-    font-size: 3vmin;
+    font-size: 2.8vmin;
 }
 
 .leftBox .backHomePage:hover{
