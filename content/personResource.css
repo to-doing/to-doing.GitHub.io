@@ -26,11 +26,13 @@ a{
     -moz-osx-font-smoothing: grayscale;
 }
 html,body{
-    width: calc(100vw - 1.8vmin) ;
+    width: calc(100vw - 1vw) ;
     height: calc(100vh - 1vh);
-    font-size: 2vmin;
+    font-size: 1.5vw;
     font-family: 微软雅黑;
-    /* background-size: 1000%; */
+    background: linear-gradient(280deg,#e1c8cc,#9cb0ce,#5f8e77);
+    /* 指定背景图像的大小 */
+    background-size: 500%;
     /* 执行动画：动画名 时长 线性的 无限次播放 */
     animation: bgAnimation 5s linear infinite;
 }
@@ -38,88 +40,59 @@ html,body{
 /* 定义动画 */
 @keyframes bgAnimation {
     0%{
-        /* background-position: 0% 50%; */
-        background-color: #e1c8cc;
+        background-position: 0% 50%;
     }
-    33.3%{
-        /* background-position: 100% 50%; */
-        background-color: #9cb0ce;
-    }
-    66.6%{
-        /* background-position: 0% 50%; */
-        background-color:  #5f8e77;
+    50%{
+        background-position: 100% 50%;
     }
     100%{
-        /* background-position: 0% 50%; */
-        background-color:  #e1c8cc;
+        background-position: 0% 50%;
     }
 }
 /* 设置滚动条的样式 */
 ::-webkit-scrollbar {
-    width: 1.8vmin;
-    height: 1.8vmin;
+    width: 1vw;
        
 }
 ::-webkit-scrollbar-thumb {
     background: rgb(190, 188, 188);    
-    border-radius: 1vmin;
+    border-radius: 1vw;
 }
 
-.leftBox ul::-webkit-scrollbar {
-    width: 0.7vmin;
+.box1::-webkit-scrollbar {
+    width: 0.5vw;
         
 }
 /* 滚动条滑块 */
 
-.leftBox::-webkit-scrollbar-thumb {
+.box1::-webkit-scrollbar-thumb {
     /* border: 1px solid lightgray; */
-        border-radius: 1vmin;
+        border-radius: 1vw;
 }
 
 
-.leftBox{
+/* 通用属性 */
+.box1{
     background:rgba(255, 255, 255,0.2);
-    position: fixed;
-    width: calc(26vmin);
-    height: 90vh;
-    float: left;
-    /* overflow: auto; */
-    box-sizing: border-box;
+        position: fixed;
+        width: calc(20vw + 1vw);
+        height: 90vh;
+        float: left;
+        overflow: auto;
 }
-.leftBox>div:nth-child(1){
-    height: 20vmin;
-    display: flex;
-    flex-direction: column;
+.box2{
+    height: calc(100vh - 1vh);
+    margin-left: 20vw;
 }
-.leftBox>div p:nth-child(1){
+.nav p:nth-child(1){
     font-weight: bold;
     color: white;
-    height: 10vmin;
-    line-height: 8vmin;
     text-align: center;
-    font-size: 4vmin;
 }
-.leftBox>div p:nth-child(2){
-    text-align: center;
+.nav p:nth-child(2){
     color: white;
-    /* height: 15vmin; */
-    font-size: 1.5vmin;
-    padding-bottom: 6px;
-    margin: 1vmin 1vmin;
-    border: 0.09vmin solid white;
-    /* 指定超出几行进行隐藏 */
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient:block-axis;
-    overflow: hidden;
-    text-overflow: ellipsis; 
 }
-.leftBox .backHomePage{
-    width: 26vmin;
-    height: 10vh; 
-    font-size: 3vmin;
-    line-height: 9vh;
-    bottom: 0;
+.box1 .backPage{
     position: fixed;
     background: transparent;
     color: whitesmoke;
@@ -128,29 +101,11 @@ html,body{
     cursor: pointer;
     transition: all 1s;
 }
-.leftBox .backHomePage span{
-    font-size: 3vmin;
-}
 
-.leftBox .backHomePage:hover{
+.box1 .backPage:hover{
     background: #35c9cb;
-    border-radius: 2.5vmin;
 }
-
-nav ul{
-    position: absolute;
-    top: 20vmin;
-    bottom: 10vh;
-    height: 65vh;
-    overflow: auto;
-}
-nav ul li{
-    width: 24vmin;
-    height: 7vmin;
-    line-height: 7vmin;
-    margin-bottom: 3vmin;
-    font-size: 2.8vmin;
-    border-radius: 1.8vmin;
+.nav ul li{
     background:transparent; 
     color: white;
     font-weight: bold;
@@ -158,110 +113,278 @@ nav ul li{
     cursor: pointer;
     transition: all 1s;
 }
-nav ul li:hover{
+.nav ul li:hover{
     background: skyblue;
-    width: 22vmin;
-    margin-left: 2vmin;
 }
-nav ul li span{
-    font-size: 2vmin;
-}
-.rightBox{
-    width: calc(100vw -26vmin);
-    height: calc(100vh - 1vh);
-    margin-left: 26vmin;
-    box-sizing: border-box;
-}
-.rightBox>div{
-    /* width: calc(100vw -21vmin + 1vmin); */
-    margin-bottom: 2vh;
+
+.box2>div{
     height: auto;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
     justify-content: flex-start;
 }
-.rightBox>div>p:nth-child(1){
-    width: calc(100vw - 21.2vmin);
-    font-size: 4.3vmin;
-    height: 10vmin;
-    line-height: 10vmin;
-    text-shadow: 0.09vmin 0.045px;
-    padding-top: 1vmin;
-    margin-bottom: 2vmin;
-    border-top: 0.09vh solid white;
+.box2>div>p:nth-child(1){
     font-weight: bold;
     color: white;
     text-align: center;
 }
-.rightBox>div>p:nth-child(2){
-    width: calc(100vw - 21.2vmin);
-    height: 10vmin;
-    font-size: 2.5vmin;
-    margin-bottom: 7vmin;
-    padding-bottom: 3vmin;
-    border-bottom: 0.09vmin solid white;
+.box2>div>p:nth-child(2){
     font-weight: 400;
     color: white;
     text-align: center;
 }
 
 
-.rightBox>div>div{
-    margin: 0 auto;
-    width: 24vmin;
-    height: 20vmin;
-    font-size: 2.5vmin;
-    margin-bottom: 5vmin;
-    box-shadow: 0.09vmin 0.09vmin 0.45vmin white;
-    border-radius: 2vmin;
+.box2>div>div{
     background: transparent;
     border: 1px solid white;
     color: white;
     overflow: hidden;
     transition: all 0.5s linear;
 }
-.rightBox>div>div:hover{
-    font-size: 2.7vmin;
-    width: 26vmin;
-    height: 26vmin;
+
+.box2>div>div p{
+    font-weight: normal;
+    text-align: center;
+    
+}
+
+.box2>div>div:hover{
     background: skyblue;
     transition: all 0.2s;
     cursor: pointer; 
     font-weight: bolder;
     
 }
-.rightBox>div>div img{
-    width: 2vmin;
-    height: 2vmin;
-}
-.rightBox>div>div:hover img{
-    width: 2.6vmin;
-    height: 2.6vmin;
-}
-.rightBox>div>div>div{
-    text-align: center;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
 
-.rightBox>div>div p{
-    font-size: 1.8vmin;
-    margin-top: 3vh;
-    font-weight: normal;
-    text-align: center;
-    /* 指定超出几行进行隐藏 */
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient:block-axis;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    
-}
-
-.rightBox>div>div:hover p{
-    font-size: 2.3vmin;
+.box2>div>div:hover p{
     font-style: oblique;
-    -webkit-line-clamp: 5;
 }
+
+
+
+
+/*横屏*/
+@media screen  and (orientation:landscape){     
+    .box2{
+        height: calc(100vh - 1vh);
+        margin-left: 20vw;
+    }
+    .nav p:nth-child(1){
+        font-size: 2vw;
+        margin-left: 1.3vw;
+        margin-bottom: 0.9vw;
+    }
+    .nav p:nth-child(2){
+        font-size: 0.9vw;
+        margin: 1vw 2vh;
+        border: 0.09vw solid white;
+    }
+    
+    .box1 .backPage{
+        width: 20vw;
+        height: 9vh; 
+        font-size: 2.2vw;
+        line-height: 9vh;
+        bottom: 0;
+    }
+    .box1 .backPage span{
+        font-size: 2.2vw;
+    }
+    .box1 .backPage:hover{
+        border-radius: 1.7vw;
+        margin-bottom: 2vh;
+    }
+    .nav ul li{
+        width: 20vw;
+        height: 7vh;
+        line-height: 7vh;
+        margin-bottom: 1vh;
+        font-size: 1.4vw;
+        border-radius: 1.8vw;
+    }
+    .nav ul li:hover{
+        width: 18vw;
+        margin-left: 2vw;
+    }
+    .nav ul li span{
+        font-size: 1.4vw;
+    }
+    
+    
+    .box2>div{
+        width: calc(80vw -2vw);
+        margin-bottom: 1.8vh;
+    }
+    .box2>div>p:nth-child(1){
+        width: 100vw;
+        font-size: 2vw;
+        height: 6vh;
+        line-height: 6vh;
+        margin-top: 1vh;
+        margin-bottom: 2vh;
+        text-shadow: 0.09vw 0.045px;
+        padding-top: 2vh;
+        border-top: 0.09vw solid white;
+    }
+    .box2>div>p:nth-child(2){
+        width: 100vw;
+        height: 3vh;
+        font-size: 1vw;
+        line-height: 3vh;
+        margin-bottom: 3vh;
+        padding-bottom: 2vw;
+        border-bottom: 0.09vw solid white;
+    }
+    
+    
+    .box2>div>div{
+        width: 20vw;
+        height: 20vh;
+        font-size: 1.2vw;
+        margin-bottom: 4vh;
+        margin-left: 3vw;
+        box-shadow: 0.09vh 0.09vw 0.45vw white;
+        border-radius: 1.2vw;
+    }
+    .box2>div>div img{
+            margin-left: 4vw;
+            width: 2vw;
+            height: 2vh;
+        }
+    .box2>div>div p{
+        font-size: 1.3vw;
+        margin-top: 3vh;
+        
+    }
+
+    .box2>div>div:hover{
+        font-size: 1.6vw;
+        width: 24vw;
+        height: 26vh;
+        
+    }
+    .box2>div>div:hover img{
+        width: 2.7vw;
+        height: 2.7vh;
+    }
+    .box2>div>div:hover p{
+        font-size: 1.5vw;
+    }
+}
+
+
+
+
+/* 竖屏*/
+@media screen  and (orientation:portrait){      
+    .nav p:nth-child(1){
+        font-size: 1.5vw;
+        margin-left: 1.1vw;
+        margin-bottom: 1.5vh;
+    }
+    .nav p:nth-child(2){
+        font-size: 0;
+        margin: 0 1vh;
+        border: 0.09vw solid white;
+    }
+    
+    .box1 .backPage{
+        width: calc(20vw + 1vw);
+        height: 9vh; 
+        font-size: 1.7vw;
+        line-height: 9vh;
+        bottom: 0;
+    }
+    .box1 .backPage span{
+        font-size: 2vw;
+    }
+    .box1 .backPage:hover{
+        border-radius: 1.7vw;
+        margin-bottom: 0.5vh;
+    }
+    .nav ul li{
+        width: 20vw;
+        height: 6vh;
+        line-height: 6vh;
+        margin-bottom: 1vh;
+        font-size: 1vw;
+        border-radius: 1.6vw;
+    }
+    .nav ul li:hover{
+        width: 18vw;
+        margin-left: 2vw;
+    }
+    .nav ul li span{
+        font-size: 1.3vw;
+    }
+    
+    
+    .box2>div{
+        width: calc(80vw -2vw);
+        margin-bottom: 1vh;
+    }
+    .box2>div>p:nth-child(1){
+        width: 100vw;
+        font-size: 2vw;
+        height: 6vh;
+        line-height: 6vh;
+        margin-top: 0.5vh;
+        margin-bottom: 0vh;
+        text-shadow: 0.09vw 0.045px;
+        padding-top: 2vh;
+        border-top: 0.09vw solid white;
+    }
+    .box2>div>p:nth-child(2){
+        width: 100vw;
+        height: 3vh;
+        font-size: 1vw;
+        line-height: 3vh;
+        margin-bottom: 3vh;
+        padding-bottom: 5vw;
+        border-bottom: 0.09vw solid white;
+    }
+    
+    
+    .box2>div>div{
+        width: 34vw;
+        height: 20vh;
+        font-size: 1.2vw;
+        margin-bottom: 4vh;
+        margin-left: 3vw;
+        box-shadow: 0.09vh 0.09vw 0.45vw white;
+        border-radius: 1.2vw;
+    }
+    .box2>div>div img{
+            margin-left: 9vw;
+            width: 2vw;
+            height: 2vh;
+        }
+    .box2>div>div p{
+        font-size: 1.3vw;
+        margin-top: 3vh;
+        
+    }
+
+    .box2>div>div:hover{
+        font-size: 1.6vw;
+        width: 36vw;
+        height: 25vh;
+        
+    }
+    .box2>div>div:hover img{
+        width: 2.5vw;
+        height: 2.5vh;
+    }
+    .box2>div>div:hover p{
+        font-size: 1.5vw;
+    }
+
+}
+    
+
+
+
+
+
