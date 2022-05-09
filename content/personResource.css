@@ -225,7 +225,7 @@ nav ul li span{
 .rightBox>div>div:hover{
     font-size: 2.5vmin;
     width: 26vmin;
-    height: 26vmin;
+    height: 30vmin;
     background: skyblue;
     transition: all 0.2s;
     cursor: pointer; 
@@ -252,9 +252,10 @@ nav ul li span{
     margin-top: 3vmin;
     font-weight: normal;
     text-align: center;
+    padding: 0 10px 0;
     /* 指定超出几行进行隐藏 */
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 4;
     -webkit-box-orient:block-axis;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -262,9 +263,9 @@ nav ul li span{
 }
 
 .rightBox>div>div:hover p{
-    font-size: 2.3vmin;
+    font-size: 2vmin;
     font-style: oblique;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 6;
 }
 
 
